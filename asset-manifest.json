@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/robinhood-clone/static/css/main.c58ade6b.chunk.css",
-    "main.js": "/robinhood-clone/static/js/main.79c4c617.chunk.js",
-    "main.js.map": "/robinhood-clone/static/js/main.79c4c617.chunk.js.map",
-    "runtime-main.js": "/robinhood-clone/static/js/runtime-main.7a954745.js",
-    "runtime-main.js.map": "/robinhood-clone/static/js/runtime-main.7a954745.js.map",
-    "static/js/2.121248f1.chunk.js": "/robinhood-clone/static/js/2.121248f1.chunk.js",
-    "static/js/2.121248f1.chunk.js.map": "/robinhood-clone/static/js/2.121248f1.chunk.js.map",
-    "static/js/3.5524407f.chunk.js": "/robinhood-clone/static/js/3.5524407f.chunk.js",
-    "static/js/3.5524407f.chunk.js.map": "/robinhood-clone/static/js/3.5524407f.chunk.js.map",
+    "main.css": "/robinhood-clone/static/css/main.1e291ed4.chunk.css",
+    "main.js": "/robinhood-clone/static/js/main.0e7a13f7.chunk.js",
+    "main.js.map": "/robinhood-clone/static/js/main.0e7a13f7.chunk.js.map",
+    "runtime-main.js": "/robinhood-clone/static/js/runtime-main.61543a89.js",
+    "runtime-main.js.map": "/robinhood-clone/static/js/runtime-main.61543a89.js.map",
+    "static/js/2.56568fd3.chunk.js": "/robinhood-clone/static/js/2.56568fd3.chunk.js",
+    "static/js/2.56568fd3.chunk.js.map": "/robinhood-clone/static/js/2.56568fd3.chunk.js.map",
+    "static/js/3.2678f3be.chunk.js": "/robinhood-clone/static/js/3.2678f3be.chunk.js",
+    "static/js/3.2678f3be.chunk.js.map": "/robinhood-clone/static/js/3.2678f3be.chunk.js.map",
     "index.html": "/robinhood-clone/index.html",
-    "static/css/main.c58ade6b.chunk.css.map": "/robinhood-clone/static/css/main.c58ade6b.chunk.css.map",
-    "static/js/2.121248f1.chunk.js.LICENSE.txt": "/robinhood-clone/static/js/2.121248f1.chunk.js.LICENSE.txt",
+    "static/css/main.1e291ed4.chunk.css.map": "/robinhood-clone/static/css/main.1e291ed4.chunk.css.map",
+    "static/js/2.56568fd3.chunk.js.LICENSE.txt": "/robinhood-clone/static/js/2.56568fd3.chunk.js.LICENSE.txt",
     "static/media/robinhood.e6522d76.svg": "/robinhood-clone/static/media/robinhood.e6522d76.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7a954745.js",
-    "static/js/2.121248f1.chunk.js",
-    "static/css/main.c58ade6b.chunk.css",
-    "static/js/main.79c4c617.chunk.js"
+    "static/js/runtime-main.61543a89.js",
+    "static/js/2.56568fd3.chunk.js",
+    "static/css/main.1e291ed4.chunk.css",
+    "static/js/main.0e7a13f7.chunk.js"
   ]
 }
