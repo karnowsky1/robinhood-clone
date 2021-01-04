@@ -2,13 +2,38 @@ import React, { useEffect, useState } from 'react';
 import '../assets/Stats.css';
 import axios from "axios";
 import StatsRow from './StatsRow';
+import { db } from "../firebase";
+
 
 const TOKEN = process.env.REACT_APP_API_KEY;
 const BASE_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
 
-  const [stockData, setstockData] = useState([])
+  const [stockData, setstockData] = useState([]);
+  const [myStocks, setmyStocks] = useState([]);
+
+  const getMyStocks = () => {
+    db 
+    .collection('myStocks')
+    .onSnapshot(snapshot => {
+      let promises = [];
+      let tempData = [];
+      snapshot.docs.map((doc) => {
+        promises.push(getStockData(doc.data().ticker)
+        .then(result => {
+          tempData.push({
+            id: doc.id,
+            data: doc.data(),
+            info: result.data
+          })
+        })
+      )})
+      Promise.all(promises).then(()=> {
+        setmyStocks(tempData);
+      })
+    })
+  };
 
   const getStockData = (stock) => {
     return axios
@@ -22,6 +47,7 @@ function Stats() {
     let tempStockData = [];
     const stocksList = ["AALP", "MSFT", "TSLA", "FB", "BABA", "UBER", "DIS", "SBUX"];
     let promises = [];
+    getMyStocks();
     stocksList.map((stock) => {
       promises.push(
         getStockData(stock)

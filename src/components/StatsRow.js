@@ -13,7 +13,7 @@ function StatsRow(props) {
         </p>
       </div>
       <div className="row__chart">
-        <img src={StockSVG} height={16}/> 
+        <img src={StockSVG} alt="stock svg" height={16}/> 
       </div>
       <div className="row__numbers">
         <p className="row__price">{props.price}</p>
