@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/Stats.css';
 import axios from "axios";
+import StatsRow from './StatsRow';
 
 const TOKEN = process.env.REACT_APP_API_KEY;
-console.log(TOKEN);
-const BASE_URL = "https://finnhub.io/api/v1/quote"
+const BASE_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
 
   const [stockData, setstockData] = useState([])
 
   const getStockData = (stock) => {
-    
-    
     return axios
     .get(`${BASE_URL}?symbol=${stock}&token=${TOKEN}`)
     .catch((error) => {
@@ -21,26 +19,28 @@ function Stats() {
   };
 
   useEffect(()=>{
-    let tempStocksData = [];
+    let tempStockData = [];
     const stocksList = ["AALP", "MSFT", "TSLA", "FB", "BABA", "UBER", "DIS", "SBUX"];
     let promises = [];
     stocksList.map((stock) => {
       promises.push(
         getStockData(stock)
-        .then((res) => { //response/result that we get 
-          console.log(res)
-          // tempStocksData.push({
-          //   name: stock,
-          //   ...res.data
-          // });
+        .then((result) => { //response/result that we get 
+          console.log(result);
+          tempStockData.push({
+            name: stock,
+            ...result.data // using the spread operator here to spread the result.data object
+            // into the tempStockData list of objects 
+
+          });
         })
       )
     });
 
-    // Promise.all(promises).then(()=>{
-    //   console.log(testData);
-    //   setstockData(testData)
-    // })
+    Promise.all(promises).then(()=>{
+      setstockData(tempStockData);
+      console.log(tempStockData);
+    })
   }, [])
 
   return (
@@ -60,6 +60,14 @@ function Stats() {
         <div className="stats__content">
           <div className="stats__rows">
             {/* stocks we can buy */}
+            {stockData.map((stock) => (
+              <StatsRow
+                key={stock.name}
+                name={stock.name}
+                openPrice={stock.o}
+                price={stock.c}
+              />
+            ))}
           </div>
         </div>
       </div>
