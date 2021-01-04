@@ -48,3 +48,32 @@
   font-weight: 700;
   margin-bottom: 8px;
 }
+
+.newsfeed__popularlists__section {
+  margin-top: 60px;
+}
+
+.newsfeed__popularlist__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 20px 0px;
+}
+
+.newsfeed__popularlists__chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsfeed__popularlists__chips span {
+  color: white;
+}
+
+/* to style the individual chips */
+.newsfeed__popularlists__chips > div {
+  display: flex;
+  height: 30px;
+  border: 1px solid #31363a;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
