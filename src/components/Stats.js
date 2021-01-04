@@ -78,9 +78,18 @@ function Stats() {
         <div className="stats__content">
           <div className="stats__rows">
             {/* for our current stocks */}
+            {myStocks.map((stock) => (
+              <StatsRow
+                key={stock.data.ticker}
+                name={stock.data.ticker}
+                openPrice={stock.info.o}
+                shares={stock.data.shares}
+                price={stock.info.c}
+              />
+            ))}
           </div>
         </div>
-        <div className="stats__header">
+        <div className="stats__header stats__lists">
           <p>Lists</p>
         </div>
         <div className="stats__content">
