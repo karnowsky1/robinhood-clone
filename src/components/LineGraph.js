@@ -5,7 +5,7 @@ import '../assets/LineGraph.css'
 function LineGraph() {
 
   const [graphData, setGraphData] = useState([]);
-
+  const test;
   const data = 
   [{
     x: 10,
